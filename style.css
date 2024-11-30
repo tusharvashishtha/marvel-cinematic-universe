@@ -23,6 +23,42 @@ html, body{
     padding: 25vh 10vw;
 }
 
+
+.loaderImg{
+    position: absolute;
+    top: 5vh;
+}
+
+.spidermanImg{
+    position: absolute;
+    left: 60vw;
+    width: 20vw;
+    height: 20vw;
+}
+
+.ironmanImg{
+    position: absolute;
+    top: 50vh;
+    left: 60vw;
+    width: 20vw;
+    height: 20vw;
+}
+
+
+/* @keyframes floatEffect{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+} */
+
+
+
 .line{
     /* background-color: rebeccapurple; */
     height: fit-content;
@@ -40,10 +76,20 @@ html, body{
     gap: 1vw;
 }
 
+.captainSheild{
+    width: 5.1vw;
+    height: 5.1vw;
+}
+.spideyWeb{
+    width: 5vw;
+    height: 5vw;
+}
+
+
 #line1-part1 h5, #line1-part1 h6{
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: 100;
-    font-family: "silk serif";
+    font-family: "Avengeance";
 
 }
 
@@ -63,8 +109,31 @@ html, body{
     font-size: 6.5vw;
     text-transform: uppercase;
     font-weight: 900;
+    opacity: 0;
+    margin: 0;
+    /* animation-name: anime; */
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 
 }
+
+@keyframes anime{
+    0%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
 #main{
     position: relative;
 
@@ -73,5 +142,32 @@ html, body{
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #202020 ;
+    background-color: #ff0000 ;
 }
+
+#page1 #navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5vw;
+    height: 7vw;
+    background-color: rgb(0, 21, 210);
+}
+.marvelLogo{
+    width: 75px;
+    height: 27px;
+}
+
+#nav2ndPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+}
+
+#nav2ndPart h4{
+    font-weight: 600;
+}
+
+
+
