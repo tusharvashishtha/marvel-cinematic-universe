@@ -28,14 +28,14 @@ function loadingAnimation() {
     opacity: 0,
     delay: 1.7
   })
-  gsap.from(".ironmanImg",{
-    x: 250,
-    y: -200,
-    duration: 2,
-    ease: Power4,
-    opacity: 0,
-    delay: 1.7
-  })
+//   gsap.from(".ironmanImg",{
+//     x: 250,
+//     y: -200,
+//     duration: 2,
+//     ease: Power4,
+//     opacity: 0,
+//     delay: 1.7
+//   })
 
 
   tl.from("#line1-part1, .line h2", {
@@ -69,8 +69,8 @@ function loadingAnimation() {
   });
 
   tl.from("#page1", {
-    delay: 0.2,
-    y: -1600,
+    // delay: 0.2,
+    y: 1600,
     opacity: 0,
     ease: Power4,
   });
@@ -78,6 +78,28 @@ function loadingAnimation() {
   tl.to("#loader", {
     display: "none",
   });
+
+  tl.from("#navbar",{
+    opacity: 0
+  })
+
+  tl.from(".hero h1",{
+    y: 120,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2
+  })
+}
+
+function cursorAnimation(){
+    document.addEventListener("mousemove", function(dets){
+        gsap.to("#cursor",{
+            left: dets.x,
+            top: dets.y
+        })
+    })
+    Shery.makeMagnet("#navbar h4", {});
 }
 
 loadingAnimation();
+cursorAnimation();
